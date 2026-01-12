@@ -3,7 +3,7 @@
   "displayName": "autoInputMethodABC",
   "description": "",
   "publisher": "zwwangoo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.89.0"
   },
@@ -11,15 +11,25 @@
     "Other"
   ],
   "extensionKind": [
-	  "ui"
+    "ui"
   ],
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "autoinputmethodabc.changeKeyboardLayout",
-      "title": "changeKeyboardLayout"
-    }]
+    "commands": [
+      {
+        "command": "autoinputmethodabc.changeKeyboardLayout",
+        "title": "切换到 ABC 输入法"
+      },
+      {
+        "command": "autoinputmethodabc.togglePanel",
+        "title": "切换面板（恢复输入法）"
+      },
+      {
+        "command": "autoinputmethodabc.focusTerminal",
+        "title": "聚焦终端（恢复输入法）"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
